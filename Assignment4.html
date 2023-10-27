@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <center>
+
+        <form>
+
+            <label>BookID : </label><input type="number" id = "bookid" placeholder="Enter BookID"/><br>
+
+            <label>Title  : </label><input type="text" id="title" placeholder="Enter Title"/><br>
+
+            <label>Author : </label><input type="text" id="author" placeholder="Enter Author"/><br>
+
+            <label>Price  : </label><input type="number" id="price" min="0" max="99999" placeholder="Enter Price"/><br>
+
+            <input type="button" value="Save" onclick="Set()">
+
+            <input type="button" value="print" onclick="print()"/>
+
+        </form>
+
+    </center>
+
+    <ul>
+
+        <li type="none" id="id1"></li>
+
+        <li  type="none" id="id2"></li>
+
+        <li type="none" id="id3"></li>
+
+        <li  type="none" id="id4"></li>
+
+    </ul>
+
+    <script>
+
+        var book = new Object();
+
+        function Set()
+
+        {
+
+            book.bookid = document.getElementById("bookid").value;
+
+            book.title = document.getElementById("title").value;
+
+            book.author = document.getElementById("author").value;
+
+            book.price = document.getElementById("price").value;
+
+            alert("Book Details has been Saved");
+
+        }  
+
+        function print()
+
+        {    
+
+            alert("Book ID: "+book.bookid+"\nTitle: "+book.title+"\nAuthor: "+book.author+"\nPrice: "+book.price);
+
+           
+
+            document.getElementById("id1").innerHTML = book.bookid;
+
+            document.getElementById("id2").innerHTML = book.title;
+
+            document.getElementById("id3").innerHTML = book.author;
+
+            document.getElementById("id4").innerHTML = book.price;  
+
+ 
+
+        }
+
+    </script>
+
+</body>
+
+</html>

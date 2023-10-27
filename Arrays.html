@@ -1,0 +1,54 @@
+<html>
+
+<script>
+
+    var arr=["GavsTech" , 100, 299.99, true, "chennai", 200,"india",];
+
+    for(i in arr)
+
+     document.writeln(arr[i]+ "@"+i+"<br>");
+
+     document.writeln('<br><br>');
+
+    for(j of arr)
+     document.writeln(i+ "<br>");
+
+    document.writeln("Length:" + arr.length);
+
+    arr.sort();
+
+    document.writeln("sorted array :" + arr);
+
+    arr.reverse();
+
+    document.writeln("Reverse array :"+arr);
+
+    var v=arr.indexOf("GavsTech")
+
+    if(v == -1)
+     document.writeln("<B> Element not found</B>");
+
+    else
+     document.writeln("<B> Element Found @" +v+ "position</b><br>");
+
+    document.writeln(arr+"<BR>");
+    document.writeln(arr.join("...")+ "<BR>");
+    arr.push(800);
+    arr.push("bangalore");
+    document.writeln(arr);
+    arr.pop();
+    document.writeln("arr after pop" +arr+ "<BR>");
+    delete arr[3];
+    document.writeln("arr after delete" +arr+"<BR>");
+    var status= 200 in arr;
+    if(status)
+     document.writeln("200 present");
+    else
+     document.writeln("<br>200 not present");
+</script>
+
+<body>
+
+</body>
+
+</html>

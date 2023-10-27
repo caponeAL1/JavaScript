@@ -1,0 +1,57 @@
+
+
+<html>
+
+    <body>
+
+        <div id="d1" style="color: red;">
+
+        </div>
+
+    </body>
+
+    <script>
+
+        var age=prompt("enter your age");
+
+        try{
+
+        if(age<=18){
+
+          throw"eligible for job";
+
+        }
+
+        else if(age>60){
+
+            throw"Take Rest...";
+
+        }
+
+        else{
+
+            throw "you can apply for job";
+
+        }}
+
+ 
+
+        catch(e){
+
+            var divtag=document.getElementById("d1");
+
+            divtag.innerHTML=e;
+
+        }
+
+        finally{
+
+            document.writeln("<br><br>Now regardless of whether you are eligible or not you can apply for job");
+
+            window.open("http://www.google.com");
+
+        }
+
+    </script>  
+
+</html>

@@ -1,0 +1,34 @@
+<htmL>
+    <script>
+
+        function test(num1, num2){
+            document.writeln(Math.sqrt(num1));
+            document.writeln(Math.sqrt(num2));
+        }
+
+        test(100,200);
+        test(1000,2000);
+        
+        var age=22;
+        var validate=function(age)
+        {
+            if(age <=18|| age>=60)
+             document.writeln("<B> Not eligible for job...</b>");
+            else
+             document.writeln("<B> eligible for job....</b>");
+        }
+        
+        validate(22);
+        
+        var calc=new Function
+
+        ("(num1, num2)", "{document.writeln(num1 *num2 <BR>); document.writeln(num1+num2)<BR>}");
+
+        calc(100,200);
+
+        var res=sum(100,200);
+
+        document.writeln("<br>Res = " +res+ "br")
+
+    </script>
+</htmL>

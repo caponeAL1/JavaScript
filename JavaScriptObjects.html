@@ -1,0 +1,36 @@
+<htmL>
+
+    <script>
+
+     var dict=[]
+     
+     dict["india"]="New Delhi";
+
+     dict["USA"]="Washington";
+
+     dict["japan"]="tokyo";
+
+     document.writeln(dict["india"] +"<br>");
+
+     document.writeln(dict["USA"] +"<br>")
+
+        var obj=new Object();
+        
+        obj.empID=100;
+
+        obj.firstName="Aravind";
+
+        obj.lastName="LN";
+
+        document.writeln(obj.empID +"&nbsp;&nbsp"+ obj.firstName);
+
+        document.writeln("<BR>" + obj["firstName"] + "&nbsp;&nbsp" + obj["lastName"])
+
+        obj.getFirstName=function(){return this.firstName};
+
+        obj.getLastName=function(){return this.lastName};
+        
+        document.writeln("First Name-" + obj.getFirstName());
+    </script>
+
+</htmL>

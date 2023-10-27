@@ -1,0 +1,85 @@
+<div id="form-container">
+
+</div>
+
+    <button onclick="addElement()">Add Element</button>
+
+    <button onclick="removeElement()">Remove Element</button>
+
+    <button onclick="replaceElement()">Replace Element</button>
+
+      <script>
+
+        function addElement() {
+
+            const elementType = prompt("Enter element type (text, checkbox, date, email):");
+
+            if (!elementType) return;
+
+            const newElement = document.createElement("input");
+
+            newElement.type = elementType;
+
+            document.getElementById("form-container").appendChild(newElement);
+
+        }
+
+        function removeElement() {
+
+            const formContainer = document.getElementById("form-container");
+
+            if (formContainer.children.length === 0) {
+
+                alert("No elements to remove.");
+
+                return;
+
+            }
+
+            const lastIndex = formContainer.children.length - 1;
+
+            formContainer.removeChild(formContainer.children[lastIndex]);
+
+        }
+
+        function replaceElement() {
+
+    const formContainer = document.getElementById("form-container");
+
+    if (formContainer.children.length === 0) {
+
+        alert("No elements to replace.");
+
+        return;
+
+    }
+
+    const lastIndex = formContainer.children.length - 1;
+
+    const newElementType = prompt("Enter new element type (text, checkbox, date, email):");
+
+    if (!newElementType) return;
+
+    if (newElementType === "submit") {
+
+        alert("Cannot replace with a submit button.");
+
+        return;
+
+    }
+
+    const newElement = document.createElement("input");
+
+    newElement.type = newElementType;
+
+    const submitButton = document.createElement("input");
+
+    submitButton.type = "submit";
+
+    formContainer.replaceChild(submitButton, formContainer.children[lastIndex]);
+
+}
+
+    </script>
+
+ 

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+ 
+
+<head>
+
+ 
+
+  <title>Array Manipulation</title>
+
+</head>
+
+<body>
+
+  <div id="originalArrays"></div>
+
+  <div id="resultArray"></div>
+
+ 
+
+  <script>
+
+    // Function to merge array B into array A without duplicates
+
+    function mergeArraysWithoutDuplicates(arrA, arrB) {
+
+      // Concatenate both arrays and eliminate duplicates
+
+      const mergedArray = [...new Set([...arrA, ...arrB])];
+
+      return mergedArray;
+
+    }
+
+ 
+
+    // Example arrays
+
+    const arrayA = [1, 2, 3, 4];
+
+    const arrayB = [3, 4, 5, 6];
+
+ 
+
+    // Display the original arrays in reverse order
+
+    const originalArraysDiv = document.getElementById('originalArrays');
+
+    originalArraysDiv.innerHTML = `
+
+      <p>Original Array A: [${arrayB.join(', ')}]</p>
+
+      <p>Original Array B: [${arrayA.join(', ')}]</p>
+
+    `;
+
+ 
+
+    // Merge arrays without duplicates
+
+    const resultArray = mergeArraysWithoutDuplicates(arrayA, arrayB);
+
+ 
+
+    // Display the result array
+
+    const resultArrayDiv = document.getElementById('resultArray');
+
+    resultArrayDiv.innerHTML = `<p>Merged Array Without Duplicates: [${resultArray.join(', ')}]</p>`;
+
+  </script>
+
+</body>
+
+</html>

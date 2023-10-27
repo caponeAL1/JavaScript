@@ -1,0 +1,81 @@
+<html>
+
+    <head>
+
+        <title>
+
+            DOM Example
+
+        </title>
+
+    </head>
+
+   
+
+    <body>
+
+        <script>
+
+            var uline=document.createdElement('u');
+
+            uline.innerText='underlined text.DOM operation';
+
+            document.body.appendChild(uline);
+
+            var input=document.createElement('br');
+
+            document.forms[0].appendChild(input);
+
+ 
+
+            var textfield=document.createdElement('input');
+
+            textfield.type='text';
+
+            textfield.placeholder='enter your last name';
+
+            textfield.width=100;
+
+            textfield.height=40;
+
+            document.forms[0].appendChild(textfield);
+
+ 
+
+            var radiofield = document.createElement('input');
+            radiofield.type='radio';
+            radiofield.checked=false;
+            radiofield.width=100;
+            radiofield.height=40;
+            document.forms[0].appendChild(radiofield);
+
+            var cfirm=confirm("want to remove <b> tag Yes/No ?")
+            if(cfirm)
+            {
+                var btag=document.getElementById("b1");
+                document.body.removeChild(btag);
+            }
+
+        </script>
+
+ 
+
+        <p id="p1" >paragraph1</p>
+
+        <b id="b1" >Bold text</b>
+
+        <form name="empform">
+
+            <input type="text" name="FirstName" /><br>
+
+            <input type="checkbox" id="h1" />Music<br>
+
+            </form>
+
+           
+
+        </form>
+
+    </body>
+
+</html>
